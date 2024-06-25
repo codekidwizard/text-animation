@@ -1,0 +1,34 @@
+body{
+    background-color: #333;
+}
+.work{
+    position: relative;
+    top: 200px;
+    left: 100px;
+    color: #333;
+    font-size: 8vw;
+    -webkit-text-stroke: 0.3vw ;
+    width:700px;
+
+}
+.work::before{
+    content: attr(data-text );
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw rgb(7, 6, 6) ;
+    border-right: 2px solid #01fe87;
+    overflow: hidden ;
+    white-space: nowrap;
+    animation: animate 4s linear infinite;
+} 
+@keyframes animate{
+    0%,10%,100%{
+        width: 0 ;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
